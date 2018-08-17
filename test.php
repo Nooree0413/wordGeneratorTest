@@ -15,12 +15,12 @@
         First name:
         <input type="text" name="fn" >
         <br>
-        <input type="submit" value="Submit">
+        <input type="submit" name="btnSubmit" value="Submit">
         
 </form> 
 
 <?php
-if (isset($_POST["fn"])){
+if (isset($_POST["btnSubmit"])){
     $name=$_POST["fn"];
     echo "<input type='submit' value='Generate Word Document'/>";
 }
@@ -53,7 +53,7 @@ $section->addText($name.
     '"Great achievement is usually born of great sacrifice, '
         . 'and is never the result of selfishness." '
         . '(Napoleon Hill)',
-    array('name' => 'Tahoma', 'size' => 10)
+    array('name' => 'Tahoma', 'size' => 10 ,'color' =>red)
 );
 
 // Adding Text element with font customized using named font style...
