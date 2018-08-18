@@ -22,9 +22,11 @@
 <?php
 if (isset($_POST["btnSubmit"])){
     $name=$_POST["fn"];
-    echo "<input type='submit' value='Generate Word Document'/>";
+    echo "<input type='submit' name='btnGenerateWord' value='Generate Word Document'/>";
+    echo"Click on the  button to generate a word document!<br>";
 }
 
+// if(isset($_POST["btnGenerateWord"])){
 require_once 'vendor/autoload.php';
 
 // Creating the new document...
@@ -79,7 +81,7 @@ $myTextElement->setFontStyle($fontStyle);
 
 // Saving the document as OOXML file...
 $objWriter = \PhpOffice\PhpWord\IOFactory::createWriter($phpWord, 'Word2007');
-$objWriter->save('helloWorld.docx');
+$objWriter->save($name.'.docx');
 
 // Saving the document as ODF file...
 // $objWriter = \PhpOffice\PhpWord\IOFactory::createWriter($phpWord, 'ODText');
@@ -91,6 +93,8 @@ $objWriter->save('helloWorld.docx');
 
 /* Note: we skip RTF, because it's not XML-based and requires a different example. */
 /* Note: we skip PDF, because "HTML-to-PDF" approach is used to create PDF documents. */
+// }
+
 ?>
 </body>
 </html>
