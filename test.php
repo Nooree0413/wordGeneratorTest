@@ -84,8 +84,8 @@ $objWriter = \PhpOffice\PhpWord\IOFactory::createWriter($phpWord, 'Word2007');
 $objWriter->save($name.'.docx');
 
 // Saving the document as ODF file...
-// $objWriter = \PhpOffice\PhpWord\IOFactory::createWriter($phpWord, 'ODText');
-// $objWriter->save('helloWorld.odt');
+ //$objWriter = \PhpOffice\PhpWord\IOFactory::createWriter($phpWord, 'ODText');
+ //$objWriter->save($name.'.odt');
 
 // Saving the document as HTML file...
 // $objWriter = \PhpOffice\PhpWord\IOFactory::createWriter($phpWord, 'HTML');
